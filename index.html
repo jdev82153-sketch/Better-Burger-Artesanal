@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Burger | O Sabor Artesanal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --accent-color: #ff3838;
+            --text-color: #ffffff;
+            --subtext: #a4b0be;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle, #2d2d2d 0%, #0f0f0f 70%);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(255, 56, 56, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: 0.3s;
+        }
+
+        .card:hover img {
+            filter: brightness(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .btn-pedir {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--accent-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-pedir:hover {
+            background: #ff5e5e;
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Better Burger</h1>
+        <p style="color: var(--subtext);">O melhor artesanal de Jales está te esperando.</p>
+    </header>
+
+    <div class="container" id="menu">
+        <div class="card">
+            <img src="URL_DA_SUA_IMAGEM_AQUI" alt="Better Experience">
+            <div class="card-content">
+                <h3>Better Experience</h3>
+                <p>Combo incrível com Coca 600ml grátis!</p>
+                <a href="#" class="btn-pedir">Pedir no WhatsApp</a>
+            </div>
+        </div>
+        </div>
+
+    <script>
+        // Efeito de scroll suave ao carregar
+        document.querySelectorAll('.card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Interação simples no console
+        console.log("Better Burger Site Iniciado com Sucesso!");
+    </script>
+</body>
+</html>
